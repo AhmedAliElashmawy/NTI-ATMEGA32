@@ -7,6 +7,7 @@
  */
 
 #include "STD_TYPES.h"
+#include "BIT_MATH.h"
 #include "GPIO_interface.h"
 #include "GPIO_private.h"
 
@@ -18,6 +19,74 @@
  * 4. INPUT_PULLUP : clear DDRx bit, set PORTx bit.
  * 5. Switch on Copy_u8Port and touch only that port's DDR/PORT.
  */
+STD_ReturnType GPIO_SetPinDirection(uint8 Copy_u8Port, uint8 Copy_u8Pin, uint8 Copy_u8Direction){
+    if (Copy_u8Port > GPIO_PORTD || Copy_u8Pin > GPIO_PIN7 || Copy_u8Direction > GPIO_INPUT_PULLUP){
+        return E_NOK;
+    }
+    
+    switch (Copy_u8Port) {
+        case GPIO_PORTA:
+            if (Copy_u8Direction == GPIO_INPUT){
+                CLR_BIT(GPIO_DDRA_REG, Copy_u8Pin);
+                CLR_BIT(GPIO_PORTA_REG, Copy_u8Pin);
+            }
+            else if (Copy_u8Direction == GPIO_OUTPUT) {
+                SET_BIT(GPIO_DDRA_REG, Copy_u8Pin);
+            }
+            else if (Copy_u8Direction == GPIO_INPUT_PULLUP) {
+                CLR_BIT(GPIO_DDRA_REG, Copy_u8Pin);
+                SET_BIT(GPIO_PORTA_REG, Copy_u8Pin);
+            }
+            break;
+        
+        case GPIO_PORTB:
+            if (Copy_u8Direction == GPIO_INPUT){
+                CLR_BIT(GPIO_DDRB_REG, Copy_u8Pin);
+                CLR_BIT(GPIO_PORTB_REG, Copy_u8Pin);
+            }
+            else if (Copy_u8Direction == GPIO_OUTPUT) {
+                SET_BIT(GPIO_DDRB_REG, Copy_u8Pin);
+            }
+            else if (Copy_u8Direction == GPIO_INPUT_PULLUP) {
+                CLR_BIT(GPIO_DDRB_REG, Copy_u8Pin);
+                SET_BIT(GPIO_PORTB_REG, Copy_u8Pin);
+            }
+            break;
+
+        case GPIO_PORTC:
+            if (Copy_u8Direction == GPIO_INPUT){
+                CLR_BIT(GPIO_DDRC_REG, Copy_u8Pin);
+                CLR_BIT(GPIO_PORTC_REG, Copy_u8Pin);
+            }
+            else if (Copy_u8Direction == GPIO_OUTPUT) {
+                SET_BIT(GPIO_DDRC_REG, Copy_u8Pin);
+            }
+            else if (Copy_u8Direction == GPIO_INPUT_PULLUP) {
+                CLR_BIT(GPIO_DDRC_REG, Copy_u8Pin);
+                SET_BIT(GPIO_PORTC_REG, Copy_u8Pin);
+            }
+            break;
+
+        case GPIO_PORTD:
+            if (Copy_u8Direction == GPIO_INPUT){
+                CLR_BIT(GPIO_DDRD_REG, Copy_u8Pin);
+                CLR_BIT(GPIO_PORTD_REG, Copy_u8Pin);
+            }
+            else if (Copy_u8Direction == GPIO_OUTPUT) {
+                SET_BIT(GPIO_DDRD_REG, Copy_u8Pin);
+            }
+            else if (Copy_u8Direction == GPIO_INPUT_PULLUP) {
+                CLR_BIT(GPIO_DDRD_REG, Copy_u8Pin);
+                SET_BIT(GPIO_PORTD_REG, Copy_u8Pin);
+            }
+            break;
+        
+        default:
+            return E_NOK;
+    }
+
+    return E_OK;
+}
 
 /*
  * GPIO_SetPinValue
