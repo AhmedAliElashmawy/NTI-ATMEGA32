@@ -2,6 +2,8 @@
 #define GPIO_INTERFACE_H
 
 /*
+ * Author: Ahmed Ellamie
+ * Email:  ahmed.ellamiee@gmail.com
  *
  * MCAL GPIO — public API for ATmega32 ports A/B/C/D.
  * Include this header from HAL, Logic, and main. Do not include GPIO_private.h there.
@@ -68,6 +70,6 @@ STD_ReturnType GPIO_SetPortValue(uint8 Copy_u8Port, uint8 Copy_u8Value);
 /*
  * Description : Read PINx into *Copy_pu8Value.
  */
-STD_ReturnType GPIO_GetPortValue(uint8 Copy_u8Port, uint8 *Copy_pu8Value);
+STD_ReturnType GPIO_GetPortValue(uint8 Copy_u8Port, uint8 *Copy_u8Value);
 
 #endif /* GPIO_INTERFACE_H */
