@@ -2,8 +2,6 @@
 #define I2C_INTERFACE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * MCAL I2C — public API for the ATmega32 TWI master.
  * Include this header from HAL, Logic, and main. Do not include I2C_private.h there.

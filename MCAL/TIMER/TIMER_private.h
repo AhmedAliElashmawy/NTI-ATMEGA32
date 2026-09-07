@@ -2,8 +2,6 @@
 #define TIMER_PRIVATE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * STUDENT TASK — TIMER private layer (ATmega32)
  * Include this file ONLY from TIMER.c.

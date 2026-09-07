@@ -2,8 +2,6 @@
 #define INTERRUPT_INTERFACE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * MCAL INTERRUPT — public API for ATmega32 global I-bit and EXTI0/1/2.
  * Include this header from HAL, Logic, and main. Do not include INTERRUPT_private.h there.

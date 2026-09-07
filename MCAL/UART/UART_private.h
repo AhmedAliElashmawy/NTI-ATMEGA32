@@ -2,8 +2,6 @@
 #define UART_PRIVATE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * STUDENT TASK — UART private layer (ATmega32 USART)
  * Include this file ONLY from UART.c.

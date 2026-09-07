@@ -2,8 +2,6 @@
 #define UART_INTERFACE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * MCAL UART — public API for the ATmega32 USART (8N1, polling).
  * Include this header from HAL, Logic, and main. Do not include UART_private.h there.

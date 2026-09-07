@@ -2,8 +2,6 @@
 #define SPI_INTERFACE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * MCAL SPI — public API for the ATmega32 SPI (mode 0, MSB first).
  * Include this header from HAL, Logic, and main. Do not include SPI_private.h there.

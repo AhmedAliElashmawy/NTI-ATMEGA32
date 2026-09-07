@@ -1,7 +1,4 @@
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
- *
  * STUDENT TASK — ADC.c  (ATmega32, 10-bit)
  * Implement every prototype from ADC_interface.h.
  */

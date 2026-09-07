@@ -1,7 +1,4 @@
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
- *
  * STUDENT TASK — UART.c  (ATmega32 USART, 8N1 polling)
  * Implement every prototype from UART_interface.h.
  */

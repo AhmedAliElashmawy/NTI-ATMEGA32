@@ -2,8 +2,6 @@
 #define GPIO_INTERFACE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * MCAL GPIO — public API for ATmega32 ports A/B/C/D.
  * Include this header from HAL, Logic, and main. Do not include GPIO_private.h there.
