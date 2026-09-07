@@ -2,8 +2,6 @@
 #define TIMER_INTERFACE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * MCAL TIMER — public API for ATmega32 Timer0 and Timer1.
  * Include this header from HAL, Logic, and main. Do not include TIMER_private.h there.

@@ -1,7 +1,4 @@
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
- *
  * STUDENT TASK — TIMER.c  (ATmega32 Timer0 + Timer1)
  * Implement every prototype from TIMER_interface.h.
  */

@@ -2,8 +2,6 @@
 #define INTERRUPT_PRIVATE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * STUDENT TASK — INTERRUPT private layer (ATmega32)
  * Include this file ONLY from INTERRUPT.c.

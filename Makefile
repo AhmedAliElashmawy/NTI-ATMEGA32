@@ -1,5 +1,3 @@
-# Author: Ahmed Ellamie
-# Email:  ahmed.ellamiee@gmail.com
 #
 # AVR_NTI layered firmware Makefile.
 # Discovers every .c / .h under the project (except build/) and links them.

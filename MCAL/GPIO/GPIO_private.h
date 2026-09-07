@@ -2,8 +2,6 @@
 #define GPIO_PRIVATE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * STUDENT TASK — GPIO private layer (ATmega32)
  * Include this file ONLY from GPIO.c. Never from main, HAL, or Logic.

@@ -2,9 +2,6 @@
 #define STD_TYPES_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
- *
  * Shared standard types for AVR_NTI LIB / MCAL / HAL / Logic.
  */
 
@@ -22,5 +19,9 @@ typedef enum
     E_OK  = 0,
     E_NOK = 1
 } STD_ReturnType;
+
+#ifndef NULL
+#define NULL ((void *)0)
+#endif
 
 #endif /* STD_TYPES_H */

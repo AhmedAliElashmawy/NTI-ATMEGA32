@@ -1,7 +1,4 @@
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
- *
  * STUDENT TASK — I2C.c  (ATmega32 TWI master)
  * Implement every prototype from I2C_interface.h.
  */

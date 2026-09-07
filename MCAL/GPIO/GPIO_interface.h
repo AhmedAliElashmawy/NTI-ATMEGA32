@@ -70,6 +70,6 @@ STD_ReturnType GPIO_SetPortValue(uint8 Copy_u8Port, uint8 Copy_u8Value);
 /*
  * Description : Read PINx into *Copy_pu8Value.
  */
-STD_ReturnType GPIO_GetPortValue(uint8 Copy_u8Port, uint8 *Copy_pu8Value);
+STD_ReturnType GPIO_GetPortValue(uint8 Copy_u8Port, uint8 *Copy_u8Value);
 
 #endif /* GPIO_INTERFACE_H */
