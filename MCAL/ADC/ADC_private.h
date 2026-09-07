@@ -2,8 +2,6 @@
 #define ADC_PRIVATE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * STUDENT TASK — ADC private layer (ATmega32)
  * Include this file ONLY from ADC.c.

@@ -2,8 +2,6 @@
 #define I2C_PRIVATE_H
 
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
  *
  * STUDENT TASK — I2C / TWI private layer (ATmega32)
  * Include this file ONLY from I2C.c.

@@ -1,5 +1,3 @@
-# Author: Ahmed Ellamie
-# Email:  ahmed.ellamiee@gmail.com
 #
 # /build — check the AVR_NTI sources and toolchain, repair the Makefile
 # if it is broken, then build the project to verify.

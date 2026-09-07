@@ -1,7 +1,4 @@
 /*
- * Author: Ahmed Ellamie
- * Email:  ahmed.ellamiee@gmail.com
- *
  * AVR_NTI application entry.
  * Layers: LIB (types) -> MCAL (drivers) -> HAL (devices) -> Logic (app) ->
  * main.
@@ -13,16 +10,15 @@
 #include "UART_interface.h"
 #include <avr/io.h>
 #include <util/delay.h>
-
+#include "GPIO_interface.h"
 
 int main(void) {
-  STD_ReturnType status = E_OK;
+  GPIO_SetPinDirection(GPIO_PORTA, GPIO_PIN0, GPIO_OUTPUT);
 
-  /* PB0 as output — replace with MCAL GPIO once the driver is ready. */
-  DDRB |= (1u << PB0);
-
-  while (E_OK == status) {
-    PORTB ^= (1u << PB0);
+  while (1) {
+    GPIO_SetPinValue(GPIO_PORTA, GPIO_PIN0, GPIO_HIGH);
+    _delay_ms(500);
+    GPIO_SetPinValue(GPIO_PORTA, GPIO_PIN0, GPIO_LOW);
     _delay_ms(500);
   }
 

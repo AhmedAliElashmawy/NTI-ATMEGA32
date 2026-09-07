@@ -1,5 +1,3 @@
-# Author: Ahmed Ellamie
-# Email:  ahmed.ellamiee@gmail.com
 #
 # /AVRINIT — check the machine, install AVR-GCC on C:\ if missing,
 # add it to PATH, write a project-wide Makefile, then build and verify.
