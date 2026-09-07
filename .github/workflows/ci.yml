@@ -1,0 +1,50 @@
+name: Build & Verify Firmware
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  build:
+    name: Compile AVR Firmware
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install AVR Toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends gcc-avr avr-libc binutils-avr make
+
+      - name: Verify Toolchain
+        run: |
+          avr-gcc --version
+          make --version
+
+      - name: Build Firmware
+        run: |
+          make clean
+          make verify
+
+      - name: Check Build Outputs
+        run: |
+          test -f build/program.elf
+          test -f build/program.hex
+          test -f build/program.bin
+          avr-size build/program.elf
+
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: atmega32-firmware
+          path: |
+            build/*.hex
+            build/*.bin
+            build/*.elf
+            build/*.map
+          retention-days: 7
