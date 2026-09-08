@@ -5,4 +5,3 @@ run_tests
 tests/run_tests
 tests/test_gpio
 tests/test_sevensegment
-scripts/
