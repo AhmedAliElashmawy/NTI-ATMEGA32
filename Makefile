@@ -44,9 +44,9 @@ INCLUDES := $(addprefix -I,$(INC_DIRS))
 FLASH_LIMIT ?= 32768
 SRAM_LIMIT  ?= 2048
 
-.PHONY: all clean size verify check-size test
+.PHONY: all clean size verify check-size test compile_commands
 
-all: $(PREPROCS) $(ASMS) $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin size check-size
+all: compile_commands $(PREPROCS) $(ASMS) $(BUILD_DIR)/$(TARGET).hex $(BUILD_DIR)/$(TARGET).bin size check-size
 
 $(BUILD_DIR)/%.i: %.c
 	mkdir -p $(dir $@)
@@ -98,6 +98,9 @@ test:
 
 verify: all
 	@echo BUILD_OK MCU=$(MCU) F_CPU=$(F_CPU) SRCS=$(SRCS)
+
+compile_commands:
+	@python3 scripts/gen_compile_commands.py "$(SRCS)" "$(INCLUDES)" "$(CFLAGS)" "/usr/bin/$(CC)"
 
 clean:
 	rm -rf $(BUILD_DIR)
